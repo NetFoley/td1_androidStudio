@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Formulaire</string>
+    <string name="next">Next</string>
+    <string name="send">SEND</string>
+    <string name="reset">RESET</string>
+    <string name="avatarDesc">Your avatar</string>
+    <string name="result">Your inputs :</string>
+    <string name="progText">Check the languages you master</string>
+    <string name="progC">C</string>
+    <string name="progJava">Java</string>
+    <string name="progJS">JavaScript</string>
+    <string name="progPHPSQL">PHP/SQL</string>
+    <string name="playTime">0</string>
+    <string name="playTimeHint">Enter your weekly playtime in hours</string>
+    <string name="name">Name</string>
+    <string name="nameHint">Enter your last name</string>
+    <string name="firstName">First name</string>
+    <string name="firstNameHint">Enter your first name</string>
+    <string name="email">Email</string>
+    <string name="emailHint">Enter your email here</string>
+    <string name="male">Male</string>
+    <string name="gender">Choose your gender</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="avatar">Switch avatar</string>
+
+    <string name="timeHigh">Careful to not become addicted !</string>
+    <string name="timeMedium">You do play a lot don t you ?</string>
+    <string name="timeLow">Try some new games !</string>
+</resources>

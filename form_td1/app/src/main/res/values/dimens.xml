@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="icon_size">64dp</dimen>
+    <dimen name="button_sizeW">128dp</dimen>
+    <dimen name="button_sizeH">48dp</dimen>
+</resources>
