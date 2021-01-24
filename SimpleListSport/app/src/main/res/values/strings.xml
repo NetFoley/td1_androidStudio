@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Simple sport list</string>
+    <!-- BUTTONS -->
+    <string-array name="sportStrArray">
+        <item>Football</item>
+        <item>Basketball</item>
+        <item>Rugby</item>
+        <item>Bicycle</item>
+        <item>Tennis</item>
+    </string-array>
+
+    <string name="footDesc">Football icon</string>
+    <string name="rugbyDesc">Rugby icon </string>
+    <string name="tennisDesc">Tennis icon </string>
+    <string name="bicycleDesc">Bicycle icon </string>
+    <string name="basketDesc">Basket icon </string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="Football">Football details</string>
+    <string name="Rugby">Rugby details</string>
+    <string name="Tennis">Tennis details</string>
+    <string name="Bicycle">Bicycle details</string>
+    <string name="Basket">Basket details</string>
+
+    <string name="footballPlay">To be played with the feet and a ball</string>
+    <string name="RugbyPlay">To be played with the hands and muscles</string>
+    <string name="TennisPlay">To be played with a racket and a ball</string>
+    <string name="BicyclePlay">Move with the feet and a bike</string>
+    <string name="BasketPlay">To be played with the hands and a ball</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Planets</string>
+    <string name="previous">Back to list</string>
+    <string name="iconDesc">Planet s picture</string>
+    <string name="placeholder">empty</string>
+    <string name="details">Planet s details</string>
+</resources>
