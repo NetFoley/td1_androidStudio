@@ -4,4 +4,5 @@
     <string name="iconDesc">Planet s picture</string>
     <string name="placeholder">empty</string>
     <string name="details">Planet s details</string>
+    <string name="inputHint">Enter something to search</string>
 </resources>

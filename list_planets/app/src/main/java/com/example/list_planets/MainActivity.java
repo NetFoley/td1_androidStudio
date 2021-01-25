@@ -4,16 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -31,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.Adapter monAdapter;
     private RecyclerView.LayoutManager monLayoutManager;
     private ArrayList<planet> monDataset = new ArrayList<planet>();
+    private ArrayList<planet> planetList = new ArrayList<planet>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         earth.setAge("7,641");
         earth.setSpeed("164");
         earth.setRadius("91540");
+        planetList.add(earth);
         monDataset.add(earth);
 
         planet jupiter = new planet();
@@ -56,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         earth.setAge("7,641");
         earth.setSpeed("164");
         earth.setRadius("91540");
+        planetList.add(jupiter);
         monDataset.add(jupiter);
 
         planet saturn = new planet();
@@ -66,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         earth.setAge("7,641");
         earth.setSpeed("164");
         earth.setRadius("91540");
+        planetList.add(saturn);
         monDataset.add(saturn);
 
         planet mars = new planet();
@@ -76,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         earth.setAge("7,641");
         earth.setSpeed("164");
         earth.setRadius("91540");
+        planetList.add(mars);
         monDataset.add(mars);
 
         monRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -102,6 +113,37 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         }));
+
+        EditText editSearch = findViewById(R.id.inputSearch);
+        editSearch.addTextChangedListener(new TextWatcher() {
+
+            @SuppressLint("ResourceAsColor")
+            public void afterTextChanged(Editable s) {
+                filtrer();
+            }
+            public void filtrer(){
+                // récupérer la chaine saisie par l'utilisateur
+                String str = editSearch.getText().toString();
+                // créer une nouvelle liste qui va contenir la résultat à afficher
+
+                //Bouclersurlalistedesnoms,avec une iteration  (
+                monDataset.clear();
+                for (planet planeti: planetList) {
+                    if(planeti.getName().startsWith(str))
+                        monDataset.add(planeti);
+                    // si le nom du foodcommence par la chaine saisie , l’ajouter à la nouvelle liste (newList.add(food))
+                    // Se servir de la méthode   startsWith(name) pour chercher la sous-chaîne.
+                    // Il faut aussi vider la liste : MonListView.setAdapter(null);
+                    monAdapter = new PlanetAdapter(monDataset);
+                    //cf. rec_adapter.java, classe de l’adaptateur
+                    monRecyclerView.setAdapter(monAdapter);
+                }
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+        });
     }
 
 }
